@@ -1,31 +1,30 @@
-Pre-Req
-yum install java-11 -y
+# Pre-Req
+	yum install java-11 -y
 
-Install Tomcat
 
-To download tomcat go to https://dlcdn.apache.org/tomcat/
+# To download tomcat go to https://dlcdn.apache.org/tomcat/
 
-1) Download Tomcat
+# 1) Download Tomcat
            wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.98/bin/apache-tomcat-8.5.98.tar.gz
 
-2) Unzip the tomcat 
+# 2) Unzip the tomcat 
            tar -zvxf apache-tomcat-8.5.98.tar.gz
 
-3) To start the services 
-Go to
+# 3) To start the services 
+	Go to
            cd /home/ec2-user/apache-tomcat-8.5.98/bin/
            ./startup.sh
 
 Tomcat will run in default 8080 port number
 
-4)By default the Manager is only accessible from a browser running on the same machine as Tomcat. 
-If you wish to modify this restriction, you'll need to edit the Manager's context.xml file.
+# 4)By default the Manager is only accessible from a browser running on the same machine as Tomcat. 
+	If you wish to modify this restriction, you'll need to edit the Manager's context.xml file.
 
-find / -name context.xml
-Usually it will under 2 places, and it neeeds to be changed in both the places
+	find / -name context.xml
+	Usually it will under 2 places, and it neeeds to be changed in both the places
 
-          /home/ec2-user/apache-tomcat-8.5.98/webapps/host-manager/META-INF/context.xml
-          /home/ec2-user/apache-tomcat-8.5.98/webapps/manager/META-INF/context.xml
+          	/home/ec2-user/apache-tomcat-8.5.98/webapps/host-manager/META-INF/context.xml
+         	 /home/ec2-user/apache-tomcat-8.5.98/webapps/manager/META-INF/context.xml
 
 	4A. Go to the path and To Edit the File with vi
                                    vi context.xml
@@ -37,18 +36,18 @@ Usually it will under 2 places, and it neeeds to be changed in both the places
 	                press (ctlt + c )
 	                :wq 
 
-5) To start tomcat server
-Go to bin folder
-cd /home/ec2-user/apache-tomcat-8.5.98/bin/
+# 5) To start tomcat server
+	Go to bin folder
+	cd /home/ec2-user/apache-tomcat-8.5.98/bin/
 
-./startup.sh 
+	./startup.sh 
 
-To update the permssions if required
-chmod +x startup.sh
-chmod +x shutdown.sh
+#  6) To update the permssions if required
+	chmod +x startup.sh
+	chmod +x shutdown.sh
 
 
-6) Update users information in the tomcat-users.xml file goto tomcat home directory and Add below users using vi tomcat-users.xml
+# 7) Update users information in the tomcat-users.xml file goto tomcat home directory and Add below users using vi tomcat-users.xml
 	5A. Go to Path /home/ec2-user/apache-tomcat-8.5.98/conf/
 		cd /home/ec2-user/apache-tomcat-8.5.98/conf/
 	5B. Edit the file tomcat-users.xml
@@ -66,4 +65,4 @@ chmod +x shutdown.sh
 		press (ctlt+c)
 		:wq
 
-6) Will be succefully able to login to Tomcat Web Application Manager
+# 8) Will be succefully able to login to Tomcat Web Application Manager
