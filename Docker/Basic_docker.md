@@ -44,9 +44,9 @@
 
 
 # Content needed to add into Dockerfile
-FROM httpd:latest
-MAINTAINER nayaksachin0712@gmail.com
-COPY ./ /usr/local/apache2/htdocs/
+	FROM httpd:latest
+	MAINTAINER nayaksachin0712@gmail.com
+	COPY ./ /usr/local/apache2/htdocs/
 
 
 
