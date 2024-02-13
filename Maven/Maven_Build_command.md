@@ -18,4 +18,5 @@
                   mvn clean package
 
 Use MobaXtream to download helo_world.war file than upload it to Apache TOMCAT
+
 check APACHE TOMCAT FILE to know how to open the Tomcat Application 
