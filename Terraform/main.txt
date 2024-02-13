@@ -1,0 +1,21 @@
+main.tf file
+
+
+module "ec2_instance" {
+  source  = "terraform-aws-modules/ec2-instance/aws"
+
+  name = "Terrafrom_Feb-05"
+
+  instance_type          = "t2.micro"
+  ami                    = "ami-0d63de463e6604d0a"
+  key_name               = "ServerInstance"
+  monitoring             = true
+  vpc_security_group_ids = ["sg-0267bad3e9cc27e39"]
+  user_data = file("tomcat.sh")
+
+  tags = {
+    Terraform   = "true"
+    Environment = "dev"
+  }
+
+}

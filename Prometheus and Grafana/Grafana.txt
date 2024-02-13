@@ -1,0 +1,4 @@
+How to run the Grafana docker image
+docker run --restart unless-stopped -d --name=grafana -p 3000:3000 grafana/grafana
+
+https://grafana.com/grafana/dashboards/1860-node-exporter-full/ 1860
