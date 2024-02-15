@@ -1,0 +1,7 @@
+[project_A]
+172.31.34.145 ansible_user = ec2-user
+172.31.31.112 ansible_user = ec2-user
+
+
+[project_B]
+172.33.32.147 ansible_user = ec2-user
